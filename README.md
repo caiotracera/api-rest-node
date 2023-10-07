@@ -1,14 +1,14 @@
 # RN (Regras de Negócio)
 
-- [ ] A transação pode ser do tipo `income`, que somará ao valor total, ou `outcome`, que subtrairá do valor total;
+- [x] A transação pode ser do tipo `income`, que somará ao valor total, ou `outcome`, que subtrairá do valor total;
 - [ ] Deve ser possível identificarmos o usuário entre as requsições;
 - [ ] O usuário só pode visualizar transações criadas por ele mesmo.
 
-# FN (Requisitos funcionais)
-- [ ] O usuário deve poder criar uma nova transação;
+# RF (Requisitos funcionais)
+- [x] O usuário deve poder criar uma nova transação;
 - [ ] O usuário deve poder obter um resumo da sua conta;
-- [ ] O usuário deve poder listar todas as transações que já ocorreram;
-- [ ] O usuário deve poder visualizar uma transação específica;
+- [x] O usuário deve poder listar todas as transações que já ocorreram;
+- [x] O usuário deve poder visualizar uma transação específica;
 
 # RNF (Requisitos não funcionais)
 
