@@ -1,4 +1,4 @@
-import { it, describe, beforeAll, afterAll } from 'vitest';
+import { it, describe, beforeAll, afterAll, expect } from 'vitest';
 import request from 'supertest';
 
 import { app } from '@/app';
@@ -21,5 +21,33 @@ describe('Transactions', () => {
         type: 'income',
       })
       .expect(201);
+  });
+
+  it('should be able to list all transactions', async () => {
+    const createTransactionResponse = await request(app.server)
+      .post('/transactions')
+      .send({
+        title: 'Random Transaction',
+        amount: 200,
+        type: 'income',
+      });
+
+    const cookies = createTransactionResponse.get('Set-Cookie');
+
+    const listTransactionsResponse = await request(app.server)
+      .get('/transactions')
+      .set('Cookie', cookies)
+      .expect(200);
+
+    expect(listTransactionsResponse.body).toEqual(
+      expect.objectContaining({
+        transactions: expect.arrayContaining([
+          expect.objectContaining({
+            title: 'Random Transaction',
+            amount: 200,
+          }),
+        ]),
+      }),
+    );
   });
 });
