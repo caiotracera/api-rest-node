@@ -5,7 +5,9 @@ import { transactionRoutes } from '@/routes/transations';
 
 const app = fastify();
 
-app.register(transactionRoutes);
+app.register(transactionRoutes, {
+  prefix: '/transactions',
+});
 
 app
   .listen({

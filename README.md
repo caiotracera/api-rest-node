@@ -1,6 +1,6 @@
 # RN (Regras de Negócio)
 
-- [ ] A transação pode ser do tipo `credito`, que somará ao valor total, ou `debito`, que subtrairá do valor total;
+- [ ] A transação pode ser do tipo `income`, que somará ao valor total, ou `outcome`, que subtrairá do valor total;
 - [ ] Deve ser possível identificarmos o usuário entre as requsições;
 - [ ] O usuário só pode visualizar transações criadas por ele mesmo.
 
