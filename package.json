@@ -1,6 +1,7 @@
 {
   "name": "api-rest-node",
   "scripts": {
+    "dev": "tsx watch src/server.ts",
     "prepare": "husky install",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
@@ -9,6 +10,7 @@
     "@caiotracera/eslint-config": "^3.3.1",
     "eslint": "^8.51.0",
     "husky": "^8.0.0",
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^14.0.1",
+    "tsx": "^3.13.0"
   }
 }
