@@ -6,11 +6,16 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
+  "dependencies": {
+    "fastify": "^4.23.2"
+  },
   "devDependencies": {
     "@caiotracera/eslint-config": "^3.3.1",
+    "@types/node": "^20.8.3",
     "eslint": "^8.51.0",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
-    "tsx": "^3.13.0"
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2"
   }
 }
