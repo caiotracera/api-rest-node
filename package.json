@@ -4,10 +4,13 @@
     "dev": "tsx watch src/server.ts",
     "prepare": "husky install",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "knex": "node --loader tsx ./node_modules/.bin/knex"
   },
   "dependencies": {
-    "fastify": "^4.23.2"
+    "fastify": "^4.23.2",
+    "knex": "^3.0.1",
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "@caiotracera/eslint-config": "^3.3.1",

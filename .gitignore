@@ -132,3 +132,6 @@ dist
 
 # Jetbrains IDEs
 .idea
+
+# Knex / SQLite
+db/app.db
