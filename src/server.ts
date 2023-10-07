@@ -1,7 +1,6 @@
 import fastify from 'fastify';
 import { knex } from '@/database';
-
-const DEFAULT_PORT = 3333;
+import { env } from '@/env';
 
 const app = fastify();
 
@@ -13,8 +12,8 @@ app.get('/', async () => {
 
 app
   .listen({
-    port: DEFAULT_PORT,
+    port: env.PORT,
   })
   .then(() => {
-    console.log(`🚀 Server is running on port ${DEFAULT_PORT}`);
+    console.log(`🚀 Server is running on port ${env.PORT}`);
   });
