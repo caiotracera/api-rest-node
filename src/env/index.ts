@@ -1,6 +1,5 @@
 import { config } from 'dotenv';
 import { z } from 'zod';
-import * as process from 'process';
 
 if (process.env.NODE_ENV === 'test') {
   config({
@@ -12,8 +11,9 @@ if (process.env.NODE_ENV === 'test') {
 
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
+  DATABASE_CLIENT: z.enum(['pg', 'sqlite']).default('sqlite'),
   DATABASE_URL: z.string(),
-  PORT: z.number().default(3333),
+  PORT: z.coerce.number().default(3333),
 });
 
 const _env = envSchema.safeParse(process.env);
