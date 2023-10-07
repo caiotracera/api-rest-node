@@ -5,7 +5,8 @@
     "prepare": "husky install",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "knex": "node --loader tsx ./node_modules/.bin/knex"
+    "knex": "node --loader tsx ./node_modules/.bin/knex",
+    "test": "vitest"
   },
   "dependencies": {
     "@fastify/cookie": "^9.1.0",
@@ -18,10 +19,14 @@
   "devDependencies": {
     "@caiotracera/eslint-config": "^3.3.1",
     "@types/node": "^20.8.3",
+    "@types/supertest": "^2.0.14",
     "eslint": "^8.51.0",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
+    "supertest": "^6.3.3",
     "tsx": "^3.13.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
   }
 }
