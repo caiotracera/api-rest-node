@@ -6,7 +6,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "knex": "node --loader tsx ./node_modules/.bin/knex",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@fastify/cookie": "^9.1.0",
